@@ -1,0 +1,59 @@
+.sidebarMenu {
+  position: static;
+  top: 13%;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  padding: 5%;
+}
+
+.menuItem {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  cursor: pointer;
+  color: var(--primary-contrast-text);
+}
+
+.iconContainer {
+  color: var(--primary-contrast-text);
+  margin-right: 10px;
+}
+
+.label{
+  @media (min-width: 576px) and (max-width: 768px) {
+    font-size: 0pt;
+  }
+}
+
+.label:not(:active){
+  font-size: 70%;
+  @media (min-width: 0px) and (max-width: 818px) {
+    font-size: 0%;
+  }
+  @media (min-width: 819px) {
+    font-size: 90%;
+  }
+}
+
+.active {
+  color: var(--secondary-main);
+
+  .iconContainer {
+    color: var(--secondary-main);
+  }
+
+  .label {
+    font-weight: bold;
+    @media screen {
+      font-size: 80%;
+    }
+    @media (min-width: 0px) and (max-width: 818px) {
+      font-size: 0%;
+    }
+    @media (min-width: 819px) {
+      font-size: 110%;
+    }
+  }
+}
+

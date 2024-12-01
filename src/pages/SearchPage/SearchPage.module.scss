@@ -1,0 +1,35 @@
+/* src/pages/SearchPage/SearchPage.module.scss */
+
+.container {
+  display: grid;
+  grid-template-columns: 3fr 0.5fr;
+  padding: 1%;
+  height: 3%;
+  box-sizing: border-box;
+}
+
+.leftColumn {
+  display: grid;
+  grid-template-rows: 70% 10%;
+  gap: 10px;
+}
+
+.rightColumn {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 10px;
+  font-size: medium;
+  :hover {
+    color: var(--primary-main);
+    background-color: var(--secondary-main);
+  }
+}
+
+// .button {
+//   width:40%;
+//   font-size: 50%;
+//   :hover {
+//     color: var(--secondary-dark);
+//     background-color: var(--secondary-main);
+//   }
+// }

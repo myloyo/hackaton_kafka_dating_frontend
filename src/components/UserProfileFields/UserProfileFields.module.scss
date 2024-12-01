@@ -1,0 +1,11 @@
+/* src/components/UserProfileFields/UserProfileFields.module.scss */
+
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  padding: 20px;
+  background-color: var(--background-default);
+  box-shadow: 0px 0px 10px var(--action-disabled-background);
+  border-radius: 12px;
+}

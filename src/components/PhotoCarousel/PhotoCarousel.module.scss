@@ -1,0 +1,105 @@
+@mixin gradient-to-transparent(
+  $direction: to top,
+  $color: rgba(0, 0, 0, 0.649),
+  $stop: 30%
+) {
+  background: linear-gradient($direction, $color $stop, rgba(0, 0, 0, 0));
+}
+
+.carouselWrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.carousel {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.slide {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+  transition: all 0.5s ease;
+}
+
+.photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.buttonsContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 35%;
+  &.prevButton {
+    padding-left: 0;
+  }
+
+  &.nextButton {
+    padding-right: 0;
+  }
+}
+.infoRow {
+  display: flex;
+  align-items: center;
+  margin-top: 4px;
+}
+
+.icon {
+  height: 1vw;
+  width: 1vw;
+  margin-right: 10px;
+  color: white;
+}
+.overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  @include gradient-to-transparent(to top, rgba(0, 0, 0, 0.9), 40%);
+  color: white;
+  padding: 10px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.buttons {
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+}
+
+.button {
+  background-color: #555;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+
+  &:hover {
+    background-color: #777;
+  }
+}
